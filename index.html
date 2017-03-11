@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>javascript second class</title>
+		<link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+		<link rel="stylesheet" type="text/css" href="css/style.css">
+	</head>
+	<body>
+
+	<section class="namota-section">
+		<div class="container">
+			<div class="row">
+				<div class="col-sm-6 signup">
+					<form name="signupform">
+						<input class="signup-input" title="Full name" type="text" name="fname" placeholder=" Full name">
+						<input class="signup-input" title="Phone" type="text" name="phone" placeholder=" Phone">
+						<input class="signup-input" title="Mail Address" type="mail" name="mail" placeholder=" Mail address">
+						<input class="signup-input" title="Password" type="password" name="pw" placeholder=" Password">
+						<input class="signup-input" title="Retype password" type="password" name="rpw" placeholder=" Retype password">
+
+						<button type="button" class="sn-button" onclick="SignUp()">Sign Up Now</button>
+
+						<h2 id="Result"></h2>
+					</form>
+					<script>
+		
+						function SignUp(){
+							var fn=document.signupform.fname.value; 
+							var ph=document.signupform.phone.value; 
+							var ml=document.signupform.mail.value; 
+							var pw=document.signupform.pw.value; 
+							var rpw=document.signupform.rpw.value; 
+
+							var result=document.getElementById("Result");
+
+							if (fn =="" || ph=="" || ml=="" || pw=="" || rpw=="") {
+
+								result.innerHTML="You can not any field.";
+							}
+							else if(ph.length<11){
+								result.innerHTML="Enter perfect phone number";
+							}
+							else if(pw.length<4){
+								result.innerHTML="Please enter minimum four digit";
+							}
+							else if(pw !=rpw){
+								result.innerHTML="The password is not matched";
+							}
+							else{
+								result.innerHTML="Full name:"+fn+"<br>"+"Phone:"+ph+"<br>"+"Mail:"+ml;
+							}
+						} 
+
+					</script>
+				</div>
+				<div class="col-sm-6">
+					<div class="calculator">
+						<form name="form" class="calcul-form">
+							<input class="calcul-input" type="text" name="display" id= "display" readonly><br/>
+							<button class="button imon" type="button" onclick="ClckOne()">1</button>
+							<button class="button" type="button" onclick="ClckTwo()">2</button>
+							<button class="button" type="button" onclick="ClckThree()">3</button>
+							<button class="button" type="button" onclick="ClckFour()">4</button>
+							<button class="button" type="button" onclick="ClckFive()">5</button>
+							<button class="button" type="button" onclick="ClckSix()">6</button>
+							<button class="button" type="button" onclick="ClckSeven()">7</button>
+							<button class="button" type="button" onclick="ClckEight()">8</button>
+							<button class="button" type="button" onclick="ClckNine()">9</button>
+							<button class="button" type="button" onclick="ClckZero()">0</button>
+							<button class="button" type="button" onclick="ClckDuvzero()">00</button>
+							<button class="button" type="button" onclick="ClckPoint()">.</button>
+
+
+							<button class="button" type="button" onclick="ClckPlus()">+</button>
+							<button class="button" type="button" onclick="ClckMins()">-</button>
+							<button class="button" type="button" onclick="ClckMult()">*</button>
+							<button class="button" type="button" onclick="ClckDevid()">/</button>
+							<button class="button" type="button" onclick="ClckEqul()">=</button>
+							<button class="button" type="button" onclick="ClckClear()">C</button>
+						</form>
+
+						<script>
+							
+							function ClckOne(){document.getElementById("display").value += 1;}
+							function ClckTwo(){document.getElementById("display").value +=2;}
+							function ClckThree(){document.getElementById("display").value +=3;}
+							function ClckFour(){document.getElementById("display").value +=4;}
+							function ClckFive(){document.getElementById("display").value +=5;}
+							function ClckSix(){document.getElementById("display").value +=6;}
+							function ClckSeven(){document.getElementById("display").value +=7;}
+							function ClckEight(){document.getElementById("display").value +=8;}
+							function ClckNine(){document.getElementById("display").value +=9;}
+							function ClckZero(){document.getElementById("display").value +=0;}
+							function ClckDuvzero(){document.getElementById("display").value +=0+"0";}
+							function ClckPoint(){document.getElementById("display").value +=".";}
+
+
+
+							function ClckPlus(){document.getElementById("display").value +="+";}
+							function ClckMins(){document.getElementById("display").value +="-";}
+							function ClckMult(){document.getElementById("display").value +="*";}
+							function ClckDevid(){document.getElementById("display").value +="/";}
+							function ClckClear(){document.getElementById("display").value ="";}
+
+
+							function ClckEqul(){
+								var result=eval(document.form.display.value);
+
+								document.form.display.value=result;
+							}
+						</script>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</section>
+		<hr>
+
+
+
+	<section id="form-section">
+		<div class="container">
+			<div class="row">
+				<div  class="col-sm-6 namota-bg">
+					<input type="text" class="namota" name="namota" id="Namota">
+					<button class="btn-custom" type="button" onclick="NamtaClick();">Multi table</button>
+
+					<h2 id="ShowTable"></h2>
+					<script>
+						function NamtaClick(){
+
+							var Nmbr=document.getElementById("Namota").value;
+							var s=10;
+							var result="";
+
+							for (var i = 1; i<=s; i++) {
+
+								result=result+Nmbr+" * "+i+"="+Nmbr*i+"<br>";
+
+								document.getElementById("ShowTable").innerHTML=result;
+							}
+						}
+					</script>
+				</div>
+				<div class="col-sm-6 area">
+					
+					<textarea rows="5" cols="80" onkeyup="TypeText()" id="TextAll"></textarea>
+					<h3 id="TextResult"> You can only 10 charecters.</h3>
+
+					<script>
+						
+					function TypeText(){
+
+						var data=document.getElementById("TextAll").value;
+							document.getElementById("TextResult").innerHTML=data;
+
+							if (data.length<=10){
+								document.getElementById("TextResult").style.color="seagreen";
+							}else{
+								document.getElementById("TextResult").style.color="red";
+							}
+						}
+
+					</script>
+
+				</div>
+			</div>
+		</div>
+	</section>
+
+	</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+				

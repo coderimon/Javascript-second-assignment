@@ -1,0 +1,129 @@
+
+@import url('https://fonts.googleapis.com/css?family=Roboto');
+
+
+body{
+
+	background: #ededed;
+	font-family: 'Roboto', sans-serif;
+}
+
+
+.namota-section{
+
+	overflow: hidden;
+	padding-bottom: 50px;
+}
+
+
+#ShowTable{
+
+	color: #fff;
+}
+
+
+.signup{
+
+	margin-top: 20px;
+}
+
+.namota-bg{
+
+	background: seagreen;
+	margin-top: 20px;
+}
+
+.namota{
+
+	padding: 4px 10px;
+	margin: 20px 0 2px 0;
+	border: 1px solid orange;
+	width: 76%;
+	background: orange;
+	color: #fff;
+	font-size: 18px;
+}
+
+
+.btn-custom{
+
+	border-radius: 0;
+	background: orange;
+	color: #fff;
+	font-size: 16px;
+	padding:5px 12px;
+	text-transform: uppercase;
+	border: 1px solid orange;
+}
+
+.calculator{
+
+	margin-top: 20px;
+}
+
+.calcul-form{
+
+	width: 400px;
+	margin: 0 auto;
+}
+
+
+.calcul-input{
+
+	width: 400px;
+	padding: 7px 10px;
+	border:1px solid #ededed;
+	color: #fff;
+	background: #01649B;
+	font-size: 22px;
+}
+
+
+.button{
+
+	padding: 10px;
+	font-size:20px;
+	float: left;
+	width: 33.3%;
+	background: #038955;
+	color: #fff;
+	border:1px solid #ededed;
+}
+
+
+#form-section{
+
+	
+}
+
+hr{
+
+border-bottom:1px solid #454545;
+	z-index: 1;
+}
+
+.signup-input{
+
+	width: 100%;
+	padding: 10px 7px;
+	margin-bottom: 6px;
+	color: #fff;
+	background: #038955;
+	border:1px solid #545454;
+	font-size: 20px;
+}
+
+.sn-button{
+
+	padding: 7px 12px;
+	background: #123456;
+	color: #fff;
+	font-size: 15px;
+	text-transform: uppercase;
+	border:1px solid #123456;
+}
+
+.area{
+
+	margin-top: 20px;
+}
